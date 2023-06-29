@@ -14,6 +14,7 @@ export const TextField = ({
   return (
     <div className="text-field">
       <input
+        disabled
         className="text-field-input"
         value={value}
         type="text"
