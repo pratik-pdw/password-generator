@@ -1,0 +1,77 @@
+.indicator-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #{$very-dark-grey};
+  border: 32px solid #{$dark-grey};
+  border-bottom: none;
+  padding: 25px 32px;
+
+  @include responsive(mb) {
+    padding: 16px;
+    border: 16px solid #{$dark-grey};
+    border-bottom: none;
+  }
+
+  .indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include responsive(mb) {
+      gap: 8px;
+    }
+  }
+  .strength {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    @include responsive(mb) {
+      gap: 6px;
+    }
+
+    span {
+      display: inline-block;
+      width: 10px;
+      height: 28px;
+      flex-shrink: 0;
+      border: 2px solid #{$almost-white};
+    }
+  }
+}
+
+.strength.too-weak {
+  span:nth-child(1) {
+    background-color: #{$red};
+    border: none;
+  }
+}
+
+.strength.weak {
+  span:nth-child(1),
+  span:nth-child(2) {
+    background-color: #{$orange};
+    border: none;
+  }
+}
+
+.strength.medium {
+  span:nth-child(1),
+  span:nth-child(2),
+  span:nth-child(3) {
+    background-color: #{$yellow};
+    border: none;
+  }
+}
+
+.strength.strong {
+  span:nth-child(1),
+  span:nth-child(2),
+  span:nth-child(3),
+  span:nth-child(4) {
+    background-color: #{$neon-green};
+    border: none;
+  }
+}

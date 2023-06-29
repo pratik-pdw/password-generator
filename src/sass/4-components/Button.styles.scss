@@ -1,0 +1,46 @@
+.btn-container {
+  padding: 40px 32px;
+  background-color: #{$dark-grey};
+
+  @include responsive(mb) {
+    padding: 16px;
+  }
+
+  .btn {
+    outline: none;
+    border: 2px solid #{$neon-green};
+    height: 65px;
+    background-color: #{$neon-green};
+    width: 100%;
+    padding: 20px 0px;
+    color: #{$dark-grey};
+    font-size: 18px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+    text-transform: uppercase;
+
+    @include responsive(mb) {
+      height: 52px;
+      padding: 14px 0px;
+      font-size: 16px;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &-text {
+      margin-right: 24px;
+    }
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid #{$neon-green};
+      color: #{$neon-green};
+    }
+  }
+}

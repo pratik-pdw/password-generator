@@ -1,0 +1,19 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mb {
+    @media screen and (max-width: 680px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tbp {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tbl {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+}

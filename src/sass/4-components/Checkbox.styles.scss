@@ -1,0 +1,42 @@
+.checkbox {
+  background-color: #{$dark-grey};
+  padding: 32px;
+  display: flex;
+  cursor: pointer;
+  height: 23px;
+
+  @include responsive(mb) {
+    padding: 22px;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked ~ span {
+      background-color: #{$neon-green};
+      border: none;
+      i {
+        display: block;
+      }
+    }
+  }
+
+  span {
+    position: relative;
+    margin-right: 24px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border: 2px solid #{$almost-white};
+
+    i {
+      display: none;
+      position: absolute;
+      font-size: 16px;
+      color: #{$very-dark-grey};
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

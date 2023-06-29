@@ -1,0 +1,52 @@
+.text-red {
+  color: #{$red};
+}
+
+.text-orange {
+  color: #{$orange};
+}
+
+.text-yellow {
+  color: #{$yellow};
+}
+
+.text-neon-green {
+  color: #{$neon-green};
+}
+
+.text-almost-white {
+  color: #{$almost-white};
+}
+
+.text-grey {
+  color: #{$grey};
+}
+
+.text-dark-grey {
+  color: #{$dark-grey};
+}
+
+.text-very-dark-grey {
+  color: #{$very-dark-grey};
+}
+
+.lg-text {
+  font-size: #{$large-text};
+  @include responsive(mb) {
+    font-size: #{$medium-text};
+  }
+}
+
+.md-text {
+  font-size: #{$medium-text};
+  @include responsive(mb) {
+    font-size: #{$body-copy};
+  }
+}
+
+.body-text {
+  font-size: #{$body-copy};
+  @include responsive(mb) {
+    font-size: 16px;
+  }
+}

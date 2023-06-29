@@ -1,0 +1,54 @@
+.text-field {
+  display: flex;
+  height: 80px;
+  padding: 19px 32px;
+  justify-content: space-between;
+  background-color: #{$dark-grey};
+  position: relative;
+
+  @include responsive(mb) {
+    padding: 17px 16px;
+  }
+
+  &-input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    color: #{$almost-white};
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @include responsive(mb) {
+      font-size: 24px;
+    }
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 21px;
+    color: #{$neon-green};
+    cursor: pointer;
+
+    &:hover {
+      color: #{$almost-white};
+    }
+
+    &-text {
+      margin-right: 16px;
+    }
+
+    &.is-copied:hover {
+      color: #{$neon-green};
+    }
+  }
+}
