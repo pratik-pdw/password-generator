@@ -45,6 +45,9 @@
 
     &-text {
       margin-right: 16px;
+      @include responsive(mb) {
+        display: none;
+      }
     }
 
     &.is-copied:hover {
